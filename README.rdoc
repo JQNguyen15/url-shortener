@@ -1,28 +1,26 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple url-shortener in rails. 
 
-Things you may want to cover:
+* Ruby version 2.3.0
+* Rails version 4.2.6
 
-* Ruby version
+== Changelog
+0.1 - First commit
+0.2 - Added in hashed urls using base 32 encoding/decoding. 
+0.3 - Added in gem 'valid_url' and use in model to validate url
 
+== TODO
+- Add quality of life features such as a nicer ui, copy link button, etc
+- Add more security to db
+
+Documentation on: 
 * System dependencies
-
 * Configuration
-
 * Database creation
-
 * Database initialization
-
 * How to run the test suite
-
 * Services (job queues, cache servers, search engines, etc.)
-
 * Deployment instructions
 
-* ...
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
