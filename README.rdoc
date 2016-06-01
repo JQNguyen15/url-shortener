@@ -12,6 +12,7 @@ Simple url-shortener in rails.
 
 == TODO
 - Add quality of life features such as a nicer ui, copy link button, etc
+- Upgrade to base 64 encoding/decoding for scalability
 - Add more security to db
 
 Documentation on: 
