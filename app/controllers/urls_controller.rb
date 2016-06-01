@@ -6,7 +6,9 @@ class UrlsController < ApplicationController
   def create
     @shortened_url = Url.new(shortened_url_params)
     if @shortened_url.save
-      flash[:shortened_id] = @shortened_url.id
+      #hash url into db
+      @shortened_url.update_attribute(:urlhash , @shortened_url.id.to_s(36))
+      flash[:shortened_id] = @shortened_url.urlhash
       redirect_to new_url_url
     else
       render :action => "new"
@@ -14,7 +16,8 @@ class UrlsController < ApplicationController
   end
 
   def show
-    @shortened_url = Url.find(params[:id])
+    #find the id based on the hash
+    @shortened_url = Url.find(params[:id].to_i(36))
 
     u = URI.parse(@shortened_url.url)
     #check if link has a protocol
