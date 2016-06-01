@@ -6,9 +6,9 @@ Simple url-shortener in rails.
 * Rails version 4.2.6
 
 == Changelog
-0.1 - First commit
-0.2 - Added in hashed urls using base 32 encoding/decoding. 
-0.3 - Added in gem 'valid_url' and use in model to validate url
+* 0.1 - First commit
+* 0.2 - Added in hashed urls using base 32 encoding/decoding. 
+* 0.3 - Added in gem 'valid_url' and use in model to validate url
 
 == TODO
 - Add quality of life features such as a nicer ui, copy link button, etc
