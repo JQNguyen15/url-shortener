@@ -19,9 +19,9 @@ Simple url-shortener in rails.
 * visit localhost:3000 to test app on localhost
 
 == TODO
+- Switch DB from sqlite to postgresql
 - Add quality of life features such as a nicer ui, copy link button, etc
 - Upgrade to base 64 encoding/decoding for scalability
-- Add more security to db
 
 Documentation on: 
 * System dependencies
