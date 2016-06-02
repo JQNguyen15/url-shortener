@@ -10,6 +10,14 @@ Simple url-shortener in rails.
 * 0.2 - Added in hashed urls using base 32 encoding/decoding. 
 * 0.3 - Added in gem 'valid_url' and use in model to validate url
 
+== Deployment on localhost
+* git clone https://github.com/JQNguyen15/url-shortener.git
+* cd url-shortener
+* chmod 755 "*" (without quotes)
+* bin/rake db:migrate
+* bin/rails server to start the server
+* visit localhost:3000 to test app on localhost
+
 == TODO
 - Add quality of life features such as a nicer ui, copy link button, etc
 - Upgrade to base 64 encoding/decoding for scalability
@@ -17,11 +25,8 @@ Simple url-shortener in rails.
 
 Documentation on: 
 * System dependencies
-* Configuration
-* Database creation
-* Database initialization
 * How to run the test suite
 * Services (job queues, cache servers, search engines, etc.)
-* Deployment instructions
+
 
 
