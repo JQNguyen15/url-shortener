@@ -1,14 +1,16 @@
 == README
 
 Simple url-shortener in rails. 
+Deployed on http://urishort.herokuapp.com/urls/new
 
 * Ruby version 2.3.0
 * Rails version 4.2.6
 
 == Changelog
-* 0.1 - First commit
-* 0.2 - Added in hashed urls using base 32 encoding/decoding. 
+* 0.4 - Switched production db to postgresql from sqlite. Deployed on heroku
 * 0.3 - Added in gem 'valid_url' and use in model to validate url
+* 0.2 - Added in hashed urls using base 32 encoding/decoding. 
+* 0.1 - First commit
 
 == Deployment on localhost
 * git clone https://github.com/JQNguyen15/url-shortener.git
@@ -18,15 +20,17 @@ Simple url-shortener in rails.
 * bin/rails server to start the server
 * visit localhost:3000 to test app on localhost
 
+== Deployment on heroku
+* fork from git
+* sync up on heroku
+* run command "heroku run rake db:migrate --app <appname on heroku>" while in the folder. Also need heroku toolbelt installed
+
 == TODO
-- Switch DB from sqlite to postgresql
 - Add quality of life features such as a nicer ui, copy link button, etc
 - Upgrade to base 64 encoding/decoding for scalability
 
 Documentation on: 
 * System dependencies
-* How to run the test suite
-* Services (job queues, cache servers, search engines, etc.)
 
 
 
