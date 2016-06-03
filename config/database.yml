@@ -23,7 +23,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: CreateURLs
+  database: urls
   pool: 5
   username: jwin
   password: n0r1l0
