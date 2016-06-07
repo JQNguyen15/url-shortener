@@ -7,6 +7,7 @@ Deployed on http://urishort.herokuapp.com/urls/new
 * Rails version 4.2.6
 
 == Changelog
+* 0.5 - Added nicer UI
 * 0.4 - Switched production db to postgresql from sqlite. Deployed on heroku
 * 0.3 - Added in gem 'valid_url' and use in model to validate url
 * 0.2 - Added in hashed urls using base 32 encoding/decoding. 
@@ -26,7 +27,7 @@ Deployed on http://urishort.herokuapp.com/urls/new
 * run command "heroku run rake db:migrate --app <appname on heroku>" while in the folder. Also need heroku toolbelt installed
 
 == TODO
-- Add quality of life features such as a nicer ui, copy link button, etc
+- Refactor some front end code into proper folders
 - Upgrade to base 64 encoding/decoding for scalability
 
 Documentation on: 
