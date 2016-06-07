@@ -9,6 +9,7 @@ class UrlsController < ApplicationController
       #hash url into db
       @shortened_url.update_attribute(:urlhash , @shortened_url.id.to_s(36))
       flash[:shortened_id] = @shortened_url.urlhash
+      flash[:original_url] = @shortened_url.url
       redirect_to new_url_url
     else
       render :action => "new"

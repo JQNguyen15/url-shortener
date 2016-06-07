@@ -5,17 +5,35 @@
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
+  <style>
+  	body{
+		background-color: lightblue;
+	}
+  </style>
 </head>
 <body>
 
+<%= yield %>
+
 <% if flash[:shortened_id].present? %>
   <p class='shortened-link'>
-    Shortened URL: <%= link_to 'here', url_url(flash[:shortened_id]) %>
-    (Right click and copy link to share it).
+  	<font color = #B67F13><b>
+  		Original URL: <%= "#{flash[:original_url]}" =%>
+  		</br>
+	    Shortened URL: 
+	    <input id="post-shortlink" value="<%= "#{request.host_with_port}" + "/urls/" +"#{flash[:shortened_id]}" =%>">
+	    <button class="button" id="copy-button" data-clipboard-target="#post-shortlink">Copy</button>
+	    </b>
+	    <script>
+	    	(function(){
+			    new Clipboard('#copy-button');
+			})();
+	    </script>
+    </font>
   </p>
-<% end %>
 
-<%= yield %>
+<% end %>
 
 </body>
 </html>
