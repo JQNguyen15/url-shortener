@@ -10,7 +10,7 @@ Deployed on http://urishort.herokuapp.com/urls/new
 * 0.5 - Added nicer UI
 * 0.4 - Switched production db to postgresql from sqlite. Deployed on heroku
 * 0.3 - Added in gem 'valid_url' and use in model to validate url
-* 0.2 - Added in hashed urls using base 32 encoding/decoding. 
+* 0.2 - Added in hashed urls using base 36 encoding/decoding. 
 * 0.1 - First commit
 
 == Deployment on localhost
